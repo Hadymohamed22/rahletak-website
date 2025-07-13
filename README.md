@@ -6,7 +6,6 @@ This project was a great opportunity to improve my Next.js skills — especially
 ---
 
 ## Project Features 🚀 :
-
 - Fully responsive travel homepage
 - Sections like Hero, About Us, Why Choose Us, Testimonials, and more
 - Destination cards with details and images
@@ -21,7 +20,6 @@ This project was a great opportunity to improve my Next.js skills — especially
 ---
 
 ## Tools I Used 🛠️ :
-
 - **Next.js 14** (App Router)
 - **Tailwind CSS**
 - **Swiper.js** (for carousels)
@@ -32,7 +30,6 @@ This project was a great opportunity to improve my Next.js skills — especially
 ---
 
 ## Data Handling 🧠:
-
 - Destinations are loaded from a local JSON file (`/public/data/important-places.json`)
 - Used ISR (Incremental Static Regeneration) to keep data fresh every 60 seconds
 - Dynamic routing for each place using `slug` field
@@ -42,7 +39,7 @@ This project was a great opportunity to improve my Next.js skills — especially
 
 ## LIVE DEMO :
 
-👉 **[Preview Website](https://your-live-link.vercel.app/)** _(replace with your deployed link)_
+👉 **[Preview Website](https://your-live-link.vercel.app/)**
 
 ---
 ## To Run Website
