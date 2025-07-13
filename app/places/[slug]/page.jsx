@@ -46,7 +46,7 @@ const page = async ({ params }) => {
   const currentPlace = data.find((e) => e.slug === params.slug);
   if (!currentPlace) notFound();
   return (
-    <div className={`${currentPlace.name}-place my-12`}>
+    <div className={`${currentPlace.name}-place py-12 bg-primary/25`}>
       <div className="container mx-auto px-5">
         <div className="content grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 md:gap-5 lg:gap-10">
           <div className="image-col col-span-1 md:col-span-2 lg:col-span-1 overflow-hidden h-[450px] rounded-2xl relative">
@@ -63,15 +63,16 @@ const page = async ({ params }) => {
               الوجهة : <span className="text-primary">{currentPlace.name}</span>
             </h4>
             <p className="text-base md:text-lg text-secondary mt-2 w-[90%] md:w-[85%]">
-              الوصف : <span className="text-para">{currentPlace.details}</span>
+              الوصف :{" "}
+              <span className="text-gray-500">{currentPlace.details}</span>
             </p>
             <p className="text-base md:text-lg text-secondary mt-1 w-[90%] md:w-[85%]">
               الموقع :{" "}
-              <span className="text-para">{currentPlace.location}</span>
+              <span className="text-gray-500">{currentPlace.location}</span>
             </p>
             <p className="text-base md:text-lg text-secondary mt-1 w-[90%] md:w-[85%]">
               التقييم :{" "}
-              <span className="text-para">5/{currentPlace.rating}⭐</span>
+              <span className="text-gray-500">5/{currentPlace.rating}⭐</span>
             </p>
             <a
               href={currentPlace.mapLink}
