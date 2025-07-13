@@ -1,28 +1,25 @@
 import Tag from "@/app/components/Tag";
 import Image from "next/image";
 import { notFound } from "next/navigation";
-import { promises as fs } from "fs";
-import path from "path";
 
 export async function generateStaticParams() {
-  const filePath = path.join(
-    process.cwd(),
-    "public/data/important-places.json"
+  const res = await fetch(
+    `https://api.myjson.online/v1/records/2fa93ce6-fe16-4f25-b979-fad445366601`,
+    { next: { revalidate: 60 } }
   );
-  const jsonData = await fs.readFile(filePath, "utf-8");
-  const data = JSON.parse(jsonData);
+  const json = await res.json();
+  const data = json.data ?? [];
   return data.map((e) => ({
     slug: e.slug,
   }));
 }
 
 export async function generateMetadata({ params }) {
-  const filePath = path.join(
-    process.cwd(),
-    "public/data/important-places.json"
+  const res = await fetch(
+    `https://api.myjson.online/v1/records/2fa93ce6-fe16-4f25-b979-fad445366601`
   );
-  const jsonData = await fs.readFile(filePath, "utf-8");
-  const data = JSON.parse(jsonData);
+  const json = await res.json();
+  const data = json.data ?? [];
   const place = data.find((e) => e.slug === params.slug);
 
   if (!place) return {};
@@ -40,9 +37,12 @@ export async function generateMetadata({ params }) {
 }
 
 const page = async ({ params }) => {
-  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000";
-  const res = await fetch(`${baseUrl}/data/important-places.json`);
-  const data = await res.json();
+  const res = await fetch(
+    `https://api.myjson.online/v1/records/2fa93ce6-fe16-4f25-b979-fad445366601`
+  );
+  const json = await res.json();
+  const data = json.data ?? [];
+
   const currentPlace = data.find((e) => e.slug === params.slug);
   if (!currentPlace) notFound();
   return (

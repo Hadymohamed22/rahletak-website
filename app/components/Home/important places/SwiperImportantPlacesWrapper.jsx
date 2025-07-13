@@ -1,15 +1,14 @@
 import SwiperImportantPlaces from "./SwiperImportantPlaces";
-import { promises as fs } from "fs";
-import path from "path";
 
 const SwiperImportantPlacesWrapper = async () => {
-  const filePath = path.join(
-    process.cwd(),
-    "public/data/important-places.json"
+  const res = await fetch(
+    `https://api.myjson.online/v1/records/2fa93ce6-fe16-4f25-b979-fad445366601`,
+    { next: { revalidate: 60 } }
   );
-  const jsonData = await fs.readFile(filePath, "utf-8");
-  const places = JSON.parse(jsonData);
-  return <SwiperImportantPlaces places={places} />;
+  const json = await res.json();
+  const data = json.data ?? [];
+
+  return <SwiperImportantPlaces places={data} />;
 };
 
 export default SwiperImportantPlacesWrapper;
