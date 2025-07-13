@@ -10,9 +10,12 @@ const Nav = () => {
   return (
     <nav className="py-3 bg-white">
       <div className="container px-5 mx-auto flex items-center justify-between">
-        <h3 className="logo text-2xl md:text-3xl font-bold text-primary">
+        <Link
+          className="logo text-2xl md:text-3xl font-bold text-primary"
+          href="/"
+        >
           رحلتك
-        </h3>
+        </Link>
         <ul className="nav-links flex items-center gap-5">
           {navLinks.map((link) => {
             return (

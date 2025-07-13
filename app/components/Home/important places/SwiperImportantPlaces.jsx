@@ -31,6 +31,11 @@ const SwiperImportantPlaces = ({ places }) => {
           <SwiperItem place={e} />
         </SwiperSlide>
       ))}
+      {places.map((e) => (
+        <SwiperSlide key={e.id}>
+          <SwiperItem place={e} />
+        </SwiperSlide>
+      ))}
     </Swiper>
   );
 };

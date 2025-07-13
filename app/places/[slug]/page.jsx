@@ -1,20 +1,28 @@
 import Tag from "@/app/components/Tag";
 import Image from "next/image";
 import { notFound } from "next/navigation";
+import { promises as fs } from "fs";
+import path from "path";
 
 export async function generateStaticParams() {
-  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000";
-  const res = await fetch(`${baseUrl}/data/important-places.json`);
-  const data = await res.json();
+  const filePath = path.join(
+    process.cwd(),
+    "public/data/important-places.json"
+  );
+  const jsonData = await fs.readFile(filePath, "utf-8");
+  const data = JSON.parse(jsonData);
   return data.map((e) => ({
     slug: e.slug,
   }));
 }
 
 export async function generateMetadata({ params }) {
-  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000";
-  const res = await fetch(`${baseUrl}/data/important-places.json`);
-  const data = await res.json();
+  const filePath = path.join(
+    process.cwd(),
+    "public/data/important-places.json"
+  );
+  const jsonData = await fs.readFile(filePath, "utf-8");
+  const data = JSON.parse(jsonData);
   const place = data.find((e) => e.slug === params.slug);
 
   if (!place) return {};
@@ -25,7 +33,6 @@ export async function generateMetadata({ params }) {
     openGraph: {
       title: `${place.name} | استكشف مع رحلتك`,
       description: place.details,
-      images: [`${baseUrl}${place.image}`],
       type: "article",
       locale: "ar_EG",
     },
