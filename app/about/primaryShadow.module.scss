@@ -1,0 +1,14 @@
+.primaryShadow {
+  > div:nth-child(odd) {
+    box-shadow: -3px 5px 0 #eb662b80;
+    h5 {
+      color: #eb662b;
+    }
+  }
+  > div:nth-child(even) {
+    box-shadow: -3px 5px 0 #05073c80;
+    h5 {
+      color: #05073c;
+    }
+  }
+}
