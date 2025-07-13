@@ -18,42 +18,42 @@ const About = () => {
           الطبيعة أو البحر – هنا هتلاقي وجهتك المثالية.
         </p>
         <div className="gallery grid grid-cols-1 md:grid-cols-3 gap-3 my-5">
-          <div className="col relative h-[450px] md:h-[492px] overflow-hidden">
+          <div className="col relative h-[450px] md:h-[492px] overflow-hidden group">
             <Image
               src={verticalImage1}
               fill
               alt="tourist place"
               placeholder="blur"
-              className="brightness-90 duration-300 hover:rotate-3 hover:scale-110 hover:brightness-75"
+              className="brightness-90 duration-300 hover:rotate-3 hover:scale-110 hover:brightness-75 group-focus-within:rotate-3 group-focus-within:scale-110"
             />
           </div>
           <div className="col flex flex-col gap-3">
-            <div className="relative h-[240px] overflow-hidden">
+            <div className="relative h-[240px] overflow-hidden group">
               <Image
                 src={horizontalImage1}
                 fill
                 alt="tourist place"
                 placeholder="blur"
-                className="brightness-90 duration-300 hover:rotate-3 hover:scale-110 hover:brightness-75"
+                className="brightness-90 duration-300 hover:rotate-3 hover:scale-110 hover:brightness-75 group-focus-within:rotate-3 group-focus-within:scale-110"
               />
             </div>
-            <div className="relative h-[240px] overflow-hidden">
+            <div className="relative h-[240px] overflow-hidden group">
               <Image
                 src={horizontalImage2}
                 fill
                 alt="tourist place"
                 placeholder="blur"
-                className="brightness-90 duration-300 hover:rotate-3 hover:scale-110 hover:brightness-75"
+                className="brightness-90 duration-300 hover:rotate-3 hover:scale-110 hover:brightness-75 group-focus-within:rotate-3 group-focus-within:scale-110"
               />
             </div>
           </div>
-          <div className="col relative h-[450px] md:h-[492px] overflow-hidden">
+          <div className="col relative h-[450px] md:h-[492px] overflow-hidden group">
             <Image
               src={verticalImage2}
               fill
               alt="tourist place"
               placeholder="blur"
-              className="brightness-90 duration-300 hover:rotate-3 hover:scale-110 hover:brightness-75"
+              className="brightness-90 duration-300 hover:rotate-3 hover:scale-110 hover:brightness-75 group-focus-within:rotate-3 group-focus-within:scale-110"
             />
           </div>
         </div>

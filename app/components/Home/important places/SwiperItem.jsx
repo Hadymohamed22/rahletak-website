@@ -12,7 +12,7 @@ const SwiperItem = ({ place }) => {
           className="object-cover brightness-50 duration-500 group-hover:rotate-2 group-hover:scale-110"
         />
       </div>
-      <div className="content relative z-10 px-2 bottom-[-50px] duration-500 ease-[cubic-bezier(0.78,_0,_0.22,_1)] group-hover:bottom-[10px]">
+      <div className="content relative z-10 px-2 bottom-[-50px] duration-500 ease-[cubic-bezier(0.78,_0,_0.22,_1)] group-hover:bottom-[10px] group-focus-within:bottom-[10px]">
         <h5 className="text-xl md:text-2xl font-bold text-white">
           {place.name}
         </h5>
