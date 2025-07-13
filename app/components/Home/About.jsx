@@ -24,7 +24,7 @@ const About = () => {
               fill
               alt="tourist place"
               placeholder="blur"
-              className="brightness-90 duration-300 hover:rotate-3 hover:scale-110 hover:brightness-75 group-focus-within:rotate-3 group-focus-within:scale-110"
+              className="brightness-90 duration-300 hover:rotate-3 hover:scale-110 hover:brightness-75"
             />
           </div>
           <div className="col flex flex-col gap-3">
@@ -34,7 +34,7 @@ const About = () => {
                 fill
                 alt="tourist place"
                 placeholder="blur"
-                className="brightness-90 duration-300 hover:rotate-3 hover:scale-110 hover:brightness-75 group-focus-within:rotate-3 group-focus-within:scale-110"
+                className="brightness-90 duration-300 hover:rotate-3 hover:scale-110 hover:brightness-75"
               />
             </div>
             <div className="relative h-[240px] overflow-hidden group">
@@ -43,7 +43,7 @@ const About = () => {
                 fill
                 alt="tourist place"
                 placeholder="blur"
-                className="brightness-90 duration-300 hover:rotate-3 hover:scale-110 hover:brightness-75 group-focus-within:rotate-3 group-focus-within:scale-110"
+                className="brightness-90 duration-300 hover:rotate-3 hover:scale-110 hover:brightness-75"
               />
             </div>
           </div>
@@ -53,7 +53,7 @@ const About = () => {
               fill
               alt="tourist place"
               placeholder="blur"
-              className="brightness-90 duration-300 hover:rotate-3 hover:scale-110 hover:brightness-75 group-focus-within:rotate-3 group-focus-within:scale-110"
+              className="brightness-90 duration-300 hover:rotate-3 hover:scale-110 hover:brightness-75"
             />
           </div>
         </div>
