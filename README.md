@@ -1,36 +1,54 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Rahletak 🧭
 
-## Getting Started
+Hey everyone! This is a travel website I built in Arabic called **"رحلتك"** (Rahletak). I created it to help users explore Egypt's most popular tourist destinations in a simple and engaging way.
+This project was a great opportunity to improve my Next.js skills — especially working with dynamic routing, ISR, JSON data fetching, and building responsive UIs with Tailwind CSS.
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Project Features 🚀 :
+- Fully responsive travel homepage
+- Sections like Hero, About Us, Why Choose Us, Testimonials, and more
+- Destination cards with details and images
+- Dynamic routing for each destination page using `slug`
+- NotFound page for invalid URLs
+- Smooth scroll and clean navigation
+- Arabic language support (RTL layout)
+- Optimized for performance using Next.js App Router & ISR
+- Static metadata for SEO
+- Carousel for testimonials and featured destinations using Swiper.js
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+## Tools I Used 🛠️ :
+- **Next.js 14** (App Router)
+- **Tailwind CSS**
+- **Swiper.js** (for carousels)
+- **React Icons**
+- **Google Fonts (Cairo)**
+- **JSON Data** (static for destinations)
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+## Data Handling 🧠:
+- Destinations are loaded from a local JSON file (`/public/data/important-places.json`)
+- Used ISR (Incremental Static Regeneration) to keep data fresh every 60 seconds
+- Dynamic routing for each place using `slug` field
+- Custom `notFound()` page used for invalid slugs
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## LIVE DEMO :
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+👉 **[Preview Website](https://your-live-link.vercel.app/)**
 
-## Deploy on Vercel
+---
+## To Run Website
+- download repo as zip file
+- open termnal in repo folder
+- run `npm run dev`
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Author 👨‍💻:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Made with ❤️ by **[Hady Mohamed]**
+
+---
